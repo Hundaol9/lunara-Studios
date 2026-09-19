@@ -426,3 +426,141 @@ max-width: 500px;
     font-size: 30px;
     font-weight: 350;
 }
+
+.footer {
+    background: #fff0a8;
+    padding: 25px 20px 0;
+}
+
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 30px;
+
+    min-height: 190px;
+}
+
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+
+    font-family: 'League Spartan', sans-serif;
+    font-size: 11px;
+}
+
+.footer-address p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 10px;
+
+    margin: 0;
+}
+
+
+.footer-newsletter p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 9px;
+
+    margin: 0 0 15px 0;
+}
+
+.footer-newsletter form {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #000;
+
+    padding-bottom: 5px;
+}
+
+.footer-newsletter label {
+    display: none;
+}
+
+.footer-newsletter input {
+    flex: 1;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    font-family: 'League Spartan', sans-serif;
+    font-size: 9px;
+}
+
+.footer-newsletter input::placeholder {
+    color: #000;
+}
+
+.footer-newsletter button {
+    background: transparent;
+
+    border: 1px solid #8d0808;
+    border-radius: 15px;
+
+    padding: 3px 9px;
+
+    font-family: 'League Spartan', sans-serif;
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+
+.footer-social {
+    grid-column: 3;
+
+    display: flex;
+    gap: 15px;
+
+    margin-top: -90px;
+}
+
+.footer-social a {
+    color: #000;
+
+    text-decoration: none;
+
+    font-family: 'League Spartan', sans-serif;
+    font-size: 9px;
+
+    text-transform: uppercase;
+}
+
+
+.footer-copyright {
+    margin: 0;
+
+    padding: 15px 0 20px;
+
+    text-align: center;
+
+    font-family: 'League Spartan', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    color: #000;
+
+    white-space: nowrap;
+}
+
+.footer-copyright::before {
+    content: "—";
+    margin-right: 8px;
+}
+
+.footer-copyright::after {
+    content: "—";
+    margin-left: 8px;
+}
+
