@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+
+
+body{
+    background-image:url('images/butter\ cream\ \(2\).png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+.header{
+    width: 100%;
+    padding: 10px 7%;
+}
+.navbar {
+   height: 55px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   postion: relative;
+}
+
+.logo{
+    position: absolute;
+    left: 33px;
+    top: 10px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-links{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+   
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #7B0000;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'League Spartan', sans-serif;
+    transition: transform 0.3s ease,color 0.3s ease;
+}
+
+nav a:hover{
+    color: black;
+    transform: scale(1.15);
+    transition: 0.3s ease-in-out;
+}
+
+.hero{
+    position:relative;
+    width:100%-20px;
+   
+    margin: 10px;
+    overflow: hidden;
+}
+
+
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero::after{
+    content:"";
+    position: absolute;
+    inset:0;
+    background:rgba(0, 0, 0, 0.o5)
+}
+
+.hero-content{
+    position: absolute;
+    left: 7%;
+    bottom: 18px;
+    z-index: 2;
+}
+
+.hero-content h1{
+ font-family: 'League Spartan', sans-serif;
+font-size:80px;
+font-weight:600;
+}
+
+.mini-text{
+    text-align: center;
+    margin-top: 15px;
+}
+.mini-text p{
+ font-family: "Montserrat Alternates", sans-serif;
+ font-weight: 500;
+ font-size:15px;
+ align-items: center;
+
+}
+.about-intro{
+    position: relative;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:25px;
+    padding: 52px 22px 0 37px;
+    align-item:center;
+     height: 400vh;
+     view-timeline-name:--about-scroll;
+     view-timeline-axis: block;
+    
+}
+
+.about-text{
+    
+    margin-top: 100px;
+    padding:20px;
+     align-self: start;
+}
+.about-text h2{
+    padding-bottom: 20px;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 40px;
+
+}
+.about-text p{
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 20px;
+  font-weight:500;
+
+
+}
+
+.about-image {
+    position: sticky;
+    top: 55px;
+
+    width: 100%;
+    height: 1000px;
+
+    overflow: hidden;
+
+    
+}
+
+.about-image img {
+    position: absolute;
+    inset:0;
+    width: 90%;
+    height:90%;
+    object-fit: cover;
+    animation-name: change-image;
+    animation-duration:1ms;
+    animation-timing-function:linear;
+    animation-fill-mode:both;
+    animation-timeline:--about-scroll;
+    
+
+}
+
+
+
+.about-image img:nth-child(1) {
+    animation-range: 0%  20%;
+}
+
+
+.about-image img:nth-child(2) {
+    animation-range: 15%  35%;
+}
+
+
+.about-image img:nth-child(3) {
+    animation-range: 30% 50%;
+}
+
+
+.about-image img:nth-child(4) {
+    animation-range: 45% 65%;
+}
+
+
+.about-image img:nth-child(5) {
+    animation-range: 60% 80%;
+}
+
+@keyframes change-image{
+        0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.values{
+    padding: 40px 0;
+    width: 100%;
+
+
+}
+.values h2{
+     font-family: 'League Spartan', sans-serif;
+    font-size: 40px;
+    color: #7B0000;
+    text-decoration: underline;
+    margin-bottom: 25px;
+
+
+}
+
+.value{
+    width:100%;
+     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.value span {
+    display: block;
+    background: #BF0000;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 25px;
+    margin-left:20%;
+    padding: 7px 10px;
+ text-align:right;
+    box-sizing: border-box;
+}
+
+.value h3 {
+    margin: 0;
+    font-family:  font-family: 'League Spartan', sans-serif;
+    font-size: 25px;
+    font-weight: 550;
+    align-items: center;
+}
+
+
+
+
+.value h3::after {
+    content: "+";
+    
+}
+
+
+
+.value p {
+    align:flex-start;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 300px;
+    margin-bottom: 25px;
+    dispaly:none;
+}
