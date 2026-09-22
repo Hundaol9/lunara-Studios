@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image:url('images/butter\ cream\ \(2\).png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+.header{
+    width: 100%;
+    padding: 10px 7%;
+}
+.navbar {
+   height: 55px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+
+.logo{
+    position: absolute;
+    left: 33px;
+    top: 10px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-links{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+   
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #7B0000;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'League Spartan', sans-serif;
+    transition: transform 0.3s ease,color 0.3s ease;
+}
+
+nav a:hover{
+    color: black;
+    transform: scale(1.15);
+    transition: 0.3s ease-in-out;
+}
+
+
+.contact-content {
+    width: 90%;
+    margin: 120px auto 0;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+
+.contact-intro {
+    width: 90%;
+    margin: 120px auto 0;
+    left:40%;
+}
+
+.contact-intro h2 {
+    font-family: "Montserrat Alternates", sans-serif;
+
+    font-size: 58px;
+    font-weight: 400;
+
+    text-align: center;
+    text-transform: lowercase;
+
+    margin-bottom: 35px;
+}
+
+.contact-intro p {
+    width: 550px;
+
+    margin-left: 42%;
+
+    font-family: "League Spartan", sans-serif;
+    font-size: 25px;
+    line-height: 1.05;
+}
+.phone-image{
+    width:350px;
+    height:350px;
+    overflow: hidden;
+   
+}
+
+.phone-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contact-right {
+    width: 100%;
+}
+
+.intro-text h2{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 50px;
+    margin-top:0;
+    margin-bottom:35px;
+    margin-left:0;
+
+}
+
+.intro-text p{
+    font-family:  "League Spartan", sans-serif;
+    font-size: 25px;
+    margin-bottom:50px;
+    width: 600px;
+    text-align: left;
+    margin-left:0;
+
+}
+
+
+form{
+    width:100%;
+
+}
+.contact-form {
+    width: 100%;
+}
+
+form label{
+    display: block;
+    font-size:27px;
+    margin-bottom: 8px;
+   
+   
+}
+
+form input,form textarea{
+    width:500px;
+    border:2px solid #8d0808;
+    margin-bottom: 8px;
+    background: transparent;
+    font-family: "League Spartan", sans-serif;
+    font-size: 18px;
+    padding: 10px;
+}
+
+
+form input {
+    height: 45px;
+}
+
+form textarea {
+    height: 195px;
+
+    resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #000;
+}
+
+form button {
+    border: none;
+
+    background: transparent;
+
+    font-family: "League Spartan", sans-serif;
+    font-size: 20px;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    margin-top: 2px;
+}
+
+
+
+
+form button,
+form input[type="submit"] {
+    width: auto;
+
+    border: none;
+    background: transparent;
+
+    font-family: "League Spartan", sans-serif;
+
+    font-size: 20px;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    margin-top: 2px;
+}
+form button:hover,
+form input[type="submit"]:hover {
+    color: #8a0b0b;
+}
+
+.get-in-touch {
+    width: 100%;
+
+    margin-top: 55px;
+}
+
+.get-in-touch h2 {
+    font-family: "League Spartan", sans-serif;
+
+    font-size: 58px;
+    font-weight: 400;
+
+    margin-left: 0;
+
+    text-transform: uppercase;
+    font-size:60px;
+    margin-left:10%;
+}
+
+.get-in-touch h2 span {
+    color: #ed2024;
+    
+}
+
+
+.information {
+    width: 40%;
+    min-height: 350px;
+    background-color: #780707;
+    margin-left:30%;
+    margin-top: 25px;
+    padding: 35px 40px;
+    color: #fff0a8;
+}
+
+.information h3 {
+    font-size: 25px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: "League Spartan", sans-serif;;
+}
+
+.information p {
+    font-size: 17px;
+    line-height: 1.15;
+    margin-bottom: 40px;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.footer-copyright {
+    margin: 0;
+    padding: 15px 0 20px;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 65px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #000;
+    white-space: nowrap;
+    margin-top:40px;
+}
+
+.footer-copyright::before {
+    content: "—";
+    margin-right: 5px;
+}
+
+.footer-copyright::after {
+    content: "—";
+    margin-left: 5px;
+}

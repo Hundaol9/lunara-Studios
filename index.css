@@ -4,30 +4,30 @@
     box-sizing: border-box;
 }
     
-html{
-    scroll-behavior: smooth;
-}
-
 body{
     background-image:url('images/butter\ cream\ \(2\).png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    overflow-x: hidden;   
+    
+}
+.header{
+    width: 100%;
+    padding: 10px 7%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-
 .navbar {
-   width: 100%;
    height: 55px;
    display: flex;
    align-items: center;
    justify-content: center;
    position: relative;
 }
-
-
 
 .logo{
     position: absolute;
@@ -62,14 +62,8 @@ nav a:hover{
     transform: scale(1.15);
     transition: 0.3s ease-in-out;
 }
-.header{
-    width: 100%;
-    position: absolute;
-    padding: 10px 7%;
-    z-index: 10;
-    top: 0;
-    left: 0;
-}
+
+
 
 .hero{
  min-height: 700px;
@@ -118,8 +112,23 @@ nav a:hover{
     font-weight: 700;
     margin-bottom: 25px;
     font-family: 'League Spartan', sans-serif;
+
+     animation: titleReveal 2.7s ease-out forwards;
 }
 
+@keyframes titleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+        letter-spacing: 10px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 0;
+    }
+}
 
 .hero-description {
     width: 600px;
@@ -185,6 +194,7 @@ nav a:hover{
 .portfolio:nth-child(1) {
     left: 2%;
     top: -50px;
+    animation: floatOne 4s ease-in-out infinite;
 }
 
 .portfolio:nth-child(1) img {
@@ -193,6 +203,7 @@ nav a:hover{
 .portfolio:nth-child(2) {
     left: 35%;
     top: 300px;
+    animation: floatTwo 5s ease-in-out infinite;
 }
 
 .portfolio:nth-child(2) img {
@@ -203,10 +214,43 @@ nav a:hover{
 .portfolio:nth-child(3) {
     right: 9%;
     top: 130px;
+    animation: floatThree 4.5s ease-in-out infinite;
 }
 
 .portfolio:nth-child(3) img {
     border-radius: 50%;
+}
+
+@keyframes floatOne {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(-2deg);
+    }
+}
+
+
+@keyframes floatTwo {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(25px) rotate(2deg);
+    }
+}
+
+
+@keyframes floatThree {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(-2deg);
+    }
 }
 
 
@@ -241,7 +285,23 @@ nav a:hover{
     font-size: 60px;
     text-transform: uppercase;
     margin-top: 350px;
+
+    animation: serviceTitleSlide linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 35%;
 }
+@keyframes serviceTitleSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 .service-intro p {
     width: 55%;
@@ -260,9 +320,12 @@ nav a:hover{
 
 .service-list > .service {
     position: absolute;
-    z-index: 10;
+    z-index: 100;
 
     cursor: pointer;
+}
+.service-list > .service:hover {
+    z-index: 99999;
 }
 
 .service-list .service-number {
@@ -282,7 +345,14 @@ nav a:hover{
     line-height: 1.05;
 
     font-weight: 400;
+      transition: transform 0.3s ease, opacity 0.3s ease;
 }
+.service:hover h3 {
+    transform: translateY(8px) scale(0.95);
+    opacity: 0.7;
+}
+
+
 .service-number.span{
     font-size: 50px;
 }
@@ -290,6 +360,10 @@ nav a:hover{
 .service-list .service:nth-child(1) {
     left: 20%;
     top: 20px;
+
+    animation: serviceOne linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 
@@ -297,6 +371,10 @@ nav a:hover{
 .service-list .service:nth-child(2) {
   right: 20%;
     top: 80px;
+
+    animation: serviceTwo linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
 }
 
 
@@ -304,12 +382,20 @@ nav a:hover{
 .service-list .service:nth-child(3) {
     left: 40%;
     top: 200px;
+
+    animation: serviceThree linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;
 }
 
 
 .service-list .service:nth-child(4) {
     left: 10%;
     top: 400px;
+
+    animation: serviceFour linear both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 60%;
 }
 
 
@@ -317,7 +403,78 @@ nav a:hover{
 .service-list .service:nth-child(5) {
     right: 20%;
     top: 480px;
+
+
+    animation: serviceFive linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 70%;
 }
+
+@keyframes serviceOne {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes serviceTwo {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes serviceThree {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes serviceFour {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes serviceFive {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 
 .service-description {
     display: none;
@@ -327,7 +484,7 @@ nav a:hover{
     padding: 30px 20px 20px;
     background: #fff0a8;
     border: 1px solid #8d0808;
-    z-index:50;
+    z-index:200;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 20px;
     line-height: 1.4;
@@ -342,7 +499,7 @@ nav a:hover{
 .cta{
     background: #690909;
     padding: 25px 10% 50px;
-    height: 150px;
+    height: 170px;
 }
 .cta h2{
     font-family:"league spartan", sans-serif;
@@ -356,6 +513,20 @@ nav a:hover{
     font-size: 30px;
     font-weight: 350;
 }
+.cta-button2{
+
+    border:2px solid #fff0a8;
+    border-radius:40%;
+    padding: 8px 20px;
+    top:-30px;
+    color:#000;
+    gap:10px;
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    margin-top: 20px;
+    display: inline-block;
+}
 
 
 .footer {
@@ -368,7 +539,7 @@ nav a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     gap: 30px;
-
+padding-top:20px;
     min-height: 190px;
 }
 
@@ -377,37 +548,39 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    
 }
 
 .footer-links a {
     color: #000;
     text-decoration: none;
-
     font-family: 'League Spartan', sans-serif;
-    font-size: 11px;
+    font-size: 20px;
+    padding-left:50px;
+    
 }
+
 
 .footer-address p {
     font-family: 'League Spartan', sans-serif;
-    font-size: 10px;
-
+    font-size: 20px;
     margin: 0;
 }
 
+.footer-newsletter{
+    width: 500px;
+   margin-left:150px;}
 
 .footer-newsletter p {
     font-family: 'League Spartan', sans-serif;
-    font-size: 9px;
-
+    font-size: 20px;
     margin: 0 0 15px 0;
 }
 
 .footer-newsletter form {
     display: flex;
     align-items: center;
-
     border-bottom: 1px solid #000;
-
     padding-bottom: 5px;
 }
 
@@ -417,13 +590,11 @@ nav a:hover{
 
 .footer-newsletter input {
     flex: 1;
-
     background: transparent;
     border: none;
     outline: none;
-
     font-family: 'League Spartan', sans-serif;
-    font-size: 9px;
+    font-size: 10px;
 }
 
 .footer-newsletter input::placeholder {
@@ -432,57 +603,44 @@ nav a:hover{
 
 .footer-newsletter button {
     background: transparent;
-
     border: 1px solid #8d0808;
     border-radius: 15px;
-
     padding: 3px 9px;
-
     font-family: 'League Spartan', sans-serif;
     font-size: 9px;
-
     cursor: pointer;
 }
 
 
-
 .footer-social {
     grid-column: 3;
-
     display: flex;
     gap: 15px;
-
     margin-top: -90px;
+     margin-left:150px;
 }
 
 .footer-social a {
     color: #000;
-
     text-decoration: none;
-
     font-family: 'League Spartan', sans-serif;
-    font-size: 9px;
-
+    font-size: 15px;
     text-transform: uppercase;
+    margin-top:20px;
 }
 
 
 .footer-copyright {
     margin: 0;
-
     padding: 15px 0 20px;
-
     text-align: center;
-
     font-family: 'League Spartan', sans-serif;
-    font-size: 50px;
-    font-weight: 800;
-
+    font-size: 60px;
+    font-weight: 400;
     letter-spacing: 4px;
-
     color: #000;
-
     white-space: nowrap;
+    animation: copyrightLoop 25s linear infinite;
 }
 
 .footer-copyright::before {
@@ -493,4 +651,14 @@ nav a:hover{
 .footer-copyright::after {
     content: "—";
     margin-left: 8px;
+}
+
+@keyframes copyrightLoop {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
